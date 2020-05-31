@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import scala.Tuple2;
 
 import tech.weizhang.utils.SparkConfigUtil;
+import tech.weizhang.utils.UUIDUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,7 +34,9 @@ public class OperatorSamples {
 //        cartesianOperator();
 //        subtractAndIntersectionOperator();
 //        groupByOperator();
-        sampleOperator();
+//        sampleOperator();
+        System.out.println(UUIDUtil.get());
+
     }
 
     /**
