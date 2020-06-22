@@ -34,8 +34,8 @@ public class OperatorSamples {
 //        cartesianOperator();
 //        subtractAndIntersectionOperator();
 //        groupByOperator();
-//        sampleOperator();
-        System.out.println(UUIDUtil.get());
+        sampleOperator();
+//        System.out.println(UUIDUtil.get());
 
     }
 
