@@ -1,6 +1,6 @@
 package tech.weizhang.utils;
 
-import cn.hutool.Hutool;
+//import cn.hutool.Hutool;
 
 public class UUIDUtil {
     public static String get(){
