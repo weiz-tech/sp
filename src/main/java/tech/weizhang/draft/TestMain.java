@@ -1,5 +1,7 @@
 package tech.weizhang.draft;
 
+import tech.weizhang.utils.PropertyUtil;
+
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +34,8 @@ public static void main(String[]args) throws Exception{
         for(Map.Entry<Long,List<TestDto>> entry:result.entrySet()){
             System.out.println(entry.getKey()+"::"+entry.getValue().toString());
         }
+
+            System.out.println("地址："+ PropertyUtil.getProperties("spark.host"));
         }
 
         }
