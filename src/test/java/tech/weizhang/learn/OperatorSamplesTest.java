@@ -1,4 +1,4 @@
-package tech.weizhang.bd.learn.core; 
+package tech.weizhang.learn;
 
 import org.junit.Test; 
 import org.junit.Before; 

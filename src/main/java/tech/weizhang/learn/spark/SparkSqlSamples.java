@@ -1,4 +1,4 @@
-package tech.weizhang.bd.learn.core;
+package tech.weizhang.learn.spark;
 
 import cn.hutool.json.JSONObject;
 import org.apache.spark.api.java.JavaSparkContext;
@@ -7,7 +7,7 @@ import org.apache.spark.sql.SQLContext;
 import org.apache.spark.sql.types.StructField;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import tech.weizhang.draft.TestDto;
+import tech.weizhang.learn.repo.TestDto;
 import tech.weizhang.utils.SparkConfigUtil;
 
 import java.util.ArrayList;

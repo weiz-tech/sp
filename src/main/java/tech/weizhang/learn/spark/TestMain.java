@@ -1,4 +1,6 @@
-package tech.weizhang.bd.learn.core;
+package tech.weizhang.learn.spark;
+
+import tech.weizhang.learn.repo.TestObject;
 
 public class TestMain {
 

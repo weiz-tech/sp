@@ -1,4 +1,4 @@
-package tech.weizhang.bd.learn.core;
+package tech.weizhang.learn.repo;
 
 public class TestObject {
     private static String name="privatestaticname";

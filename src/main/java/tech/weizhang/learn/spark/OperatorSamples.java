@@ -1,4 +1,4 @@
-package tech.weizhang.bd.learn.core;
+package tech.weizhang.learn.spark;
 
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
