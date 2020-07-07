@@ -3,6 +3,7 @@ package tech.weizhang.learn.javacore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import tech.weizhang.learn.repo.TestDto;
+import tech.weizhang.utils.LogBackConfigurator;
 import tech.weizhang.utils.PropertyUtil;
 
 import java.lang.reflect.Method;
@@ -14,12 +15,14 @@ import java.util.stream.Collectors;
 
 public class LamdaLearn {
 
-    private static final Logger logger = LoggerFactory.getLogger(LamdaLearn.class);
+
+    private static final Logger log = LoggerFactory.getLogger(LamdaLearn.class);
 
     public static void main(String[] args){
         //获取配置文件参数
         String host = PropertyUtil.getProperty("spark.host");
-        logger.debug("测试地址："+host);
+        log.error("测试地址："+host);
+
     }
 
     //测试数据
@@ -53,7 +56,7 @@ public class LamdaLearn {
         //利用反射，获取getter方法后，将方法传入lamda表达式中
         Map<Long, List<TestDto>> result = LamdaLearn.getTestDtos(4).stream().collect(Collectors.groupingBy(f, Collectors.toList()));
         for (Map.Entry<Long, List<TestDto>> entry : result.entrySet()) {
-            System.out.println(entry.getKey() + "::" + entry.getValue().toString());
+            log.error(entry.getKey() + "::" + entry.getValue().toString());
         }
     }
 

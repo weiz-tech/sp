@@ -57,7 +57,7 @@
     <logger name="org.springframework" level="ERROR"/>
 
     <!--日志输出级别 -->
-    <root level="debug">
+    <root level="error">
         <appender-ref ref="STDOUT" />
     </root>
 

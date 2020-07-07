@@ -14,10 +14,15 @@ public class PropertyUtil {
         }catch (IOException e){
             throw new RuntimeException("从conf.properties读取配置文件失败！");
         }
+
+        //init logger
+//        LogBackConfigurator
+
     }
 
     public static String getProperty(String key){
         return p.getProperty(key);
     }
+
 
 }

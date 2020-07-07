@@ -35,7 +35,9 @@ public class OperatorSamples {
 //        subtractAndIntersectionOperator();
 //        groupByOperator();
 //        sampleOperator();
-        System.out.println(UUIDUtil.get());
+        logger.error(UUIDUtil.get());
+
+
 
     }
 
