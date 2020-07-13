@@ -21,7 +21,7 @@ public class OperatorSamples {
     private static JavaSparkContext context = SparkConfigUtil.getSparkContext();
 
     public static void main(String[] args) {
-//        mapOperator();
+        mapOperator();
 //        filterOperator();
 //        flatMapOperator();
 //        groupByKeyOperator();

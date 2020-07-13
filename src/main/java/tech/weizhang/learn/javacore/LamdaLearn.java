@@ -21,7 +21,7 @@ public class LamdaLearn {
     public static void main(String[] args){
         //获取配置文件参数
         String host = PropertyUtil.getProperty("spark.host");
-        log.error("测试地址："+host);
+        log.debug("测试地址："+host);
 
     }
 
