@@ -6,6 +6,9 @@ import tech.weizhang.learn.repo.TestDto;
 import tech.weizhang.utils.LogBackConfigurator;
 import tech.weizhang.utils.PropertyUtil;
 
+import java.lang.ref.PhantomReference;
+import java.lang.ref.Reference;
+import java.lang.ref.ReferenceQueue;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +25,8 @@ public class LamdaLearn {
         //获取配置文件参数
         String host = PropertyUtil.getProperty("spark.host");
         log.debug("测试地址："+host);
+        //幻象引用测试
+        phantomReferenceTest();
 
     }
 
@@ -59,5 +64,29 @@ public class LamdaLearn {
             log.error(entry.getKey() + "::" + entry.getValue().toString());
         }
     }
+
+    /**
+     * 对象可达性
+     */
+    public static void phantomReferenceTest(){
+        Object counter = new Object();
+        ReferenceQueue referenceQueue = new ReferenceQueue();
+        PhantomReference<Object> phantomReference = new PhantomReference<>(counter,referenceQueue);
+        counter = null;
+        try{
+            log.error("开始找回....");
+            Reference reference = referenceQueue.remove(1000L);
+            if(reference != null){
+                counter = reference.get();
+                log.error("重新找回的对象："+counter.toString());
+            }
+        }catch (InterruptedException e){
+            log.error("未找到幻象引用：",e);
+        }
+    }
+
+
+
+
 
 }
